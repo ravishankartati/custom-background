@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<plugin id="com.durity.ravi.background" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>CustomBackgroundService</name>
+    <js-module name="CustomBackgroundService" src="www/CustomBackgroundService.js">
+        <clobbers target="cordova.plugins.CustomBackgroundService" />
+    </js-module>
+    <platform name="android">
+        <edit-config file="AndroidManifest.xml" target="/manifest/" mode="merge">
+            <service android:name=".UploadFileService" android:exported="false" />
+        </edit-config>
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="CustomBackgroundService">
+                <param name="android-package" value="com.durity.ravi.background.CustomBackgroundService" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/CustomBackgroundService.java" target-dir="src/com/durity/ravi/background/CustomBackgroundService" />
+    </platform>
+</plugin>
