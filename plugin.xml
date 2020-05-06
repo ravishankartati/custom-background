@@ -14,7 +14,7 @@
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <service android:name="com.durity.ravi.background" android:stopWithTask="true" />
+            <service android:name="com.durity.ravi.background.UploadFileService" android:stopWithTask="true" />
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/CustomBackgroundService.java" target-dir="src/com/durity/ravi/background/CustomBackgroundService" />
