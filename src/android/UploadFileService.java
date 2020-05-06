@@ -7,6 +7,7 @@ import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
 import android.os.Process;
+import android.widget.Toast;
 
 public class UploadFileService extends Service {
     private Looper serviceLooper;
