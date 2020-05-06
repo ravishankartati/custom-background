@@ -5,9 +5,9 @@
         <clobbers target="cordova.plugins.CustomBackgroundService" />
     </js-module>
     <platform name="android">
-        <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+<!--         <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
             <service android:name=".UploadFileService" android:exported="false" />
-        </edit-config>
+        </edit-config> -->
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="CustomBackgroundService">
                 <param name="android-package" value="com.durity.ravi.background.CustomBackgroundService" />
