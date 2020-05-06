@@ -15,5 +15,6 @@
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/CustomBackgroundService.java" target-dir="src/com/durity/ravi/background/CustomBackgroundService" />
+        <source-file src="src/android/UploadFileService.java" target-dir="src/com/durity/ravi/background/CustomBackgroundService" />
     </platform>
 </plugin>
